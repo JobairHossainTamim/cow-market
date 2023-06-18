@@ -1,0 +1,50 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\.6b3999cd4dd32a92b8ccd931b763a0d385541793-audit.json",
+  "files": [
+    {
+      "date": 1686929760201,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-16-06-21-success.log",
+      "hash": "341f28a264f613a681ca2bdb8491d763f9fb60614264a5fa3b2c56853d268010"
+    },
+    {
+      "date": 1686980097143,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-17-06-11-success.log",
+      "hash": "6dfb47c8029527f0808ad6818871cd7297ce851d062ffd65bbff1b73e594fe7c"
+    },
+    {
+      "date": 1686981642857,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-17-06-12-success.log",
+      "hash": "dcc8016e11e98a44c2264456996335b0904add737db96601f0d3b0bb250fa3d1"
+    },
+    {
+      "date": 1687001575532,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-17-06-17-success.log",
+      "hash": "602e45d19986502f64f30ba9e1ba4066658fbb504c28a8ef53b174c624acea7a"
+    },
+    {
+      "date": 1687003202854,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-17-06-18-success.log",
+      "hash": "cb3b40cc4851e56e5f31ba493ef404c7f311e59ba98b25e1cb6b2116485d6dd8"
+    },
+    {
+      "date": 1687013165073,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-17-06-20-success.log",
+      "hash": "f57d955b54f20b1d28e490624352f1db14d8aac901ec9a3e527f3a1ecfcbae47"
+    },
+    {
+      "date": 1687014064580,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-17-06-21-success.log",
+      "hash": "f968b41525754393c5901bd9ba31c1eb944781a4953cac949d46f309315656c5"
+    },
+    {
+      "date": 1687017611776,
+      "name": "D:\\Programming-hero\\cowbazar\\logs\\winston\\successes\\phu-2023-17-06-22-success.log",
+      "hash": "e337e8dc2446567ce616c04f29b686db111b12f5afb71293e6e097d53da31017"
+    }
+  ],
+  "hashType": "sha256"
+}
