@@ -83,4 +83,10 @@ searchTerm: The search query string for searching cows (e.g., ?SearchTerm=Dhaka)
 
 
 
-
+# Auth (Admin)
+- Route: https://example.com/api/v1/admins/create-admin (POST)
+- Route: https://example.com/api/v1/admins/login (POST)
+# Auth User
+- Route: https://example.com/api/v1/auth/login (POST)
+- Route: https://example.com/api/v1/auth/signup (POST)
+- Route: https://example.com/api/v1/auth/refresh-token (POST)

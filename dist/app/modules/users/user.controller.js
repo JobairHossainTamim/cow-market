@@ -11,9 +11,18 @@ const user_services_1 = require("./user.services");
 const pick_1 = __importDefault(require("../../../shared/pick"));
 const user_const_1 = require("./user.const");
 const pagination_1 = require("../../../constants/pagination");
+const bcrypt_1 = __importDefault(require("bcrypt"));
 const createUser = (0, catchAsync_1.default)(async (req, res) => {
-    const { ...userData } = req.body;
-    const result = await user_services_1.userService.createUser(userData);
+    const { password, ...userData } = req.body;
+    // Hash the password using bcrypt
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt_1.default.hash(password, saltRounds);
+    // Update the userData object with the hashed password
+    const updatedUserData = {
+        ...userData,
+        password: hashedPassword,
+    };
+    const result = await user_services_1.userService.createUser(updatedUserData);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_1.default.OK,
         success: true,

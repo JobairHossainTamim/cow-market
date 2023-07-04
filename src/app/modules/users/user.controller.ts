@@ -7,11 +7,24 @@ import { Request, Response } from 'express';
 import pick from '../../../shared/pick';
 import { userFilterableFields } from './user.const';
 import { paginationFields } from '../../../constants/pagination';
+import bcrypt from 'bcrypt';
+
+
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
-  const { ...userData } = req.body;
+  const { password, ...userData } = req.body;
 
-  const result = await userService.createUser(userData);
+  // Hash the password using bcrypt
+  const saltRounds = 10;
+  const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+  // Update the userData object with the hashed password
+  const updatedUserData = {
+    ...userData,
+    password: hashedPassword,
+  };
+
+  const result = await userService.createUser(updatedUserData);
 
   sendResponse<IUser>(res, {
     statusCode: httpStatus.OK,
@@ -19,6 +32,7 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
     message: 'User created successfully!',
     data: result,
   });
+
 });
 
 const getAllUser = catchAsync(async (req: Request, res: Response) => {
