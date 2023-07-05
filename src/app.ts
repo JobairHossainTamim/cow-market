@@ -16,9 +16,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1', router);
 
+
+
+
 //global error handler
 app.use(globalErrorHandler);
 
+
+app.get("/", (req: Request, res: Response) => res.send("Hello Programming Hero"));
 //handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(httpStatus.NOT_FOUND).json({

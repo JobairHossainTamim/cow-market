@@ -18,6 +18,7 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/api/v1', routes_1.default);
 //global error handler
 app.use(globalErrorHandler_1.default);
+app.get("/", (req, res) => res.send("Hello Programming Hero"));
 //handle not found
 app.use((req, res, next) => {
     res.status(http_status_1.default.NOT_FOUND).json({
